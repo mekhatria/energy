@@ -271,8 +271,7 @@ footer a{color:var(--soft)}
     $('sSol').textContent = `×${fmt(s.sol / sol0, 1)}`;
     const vi = s.sensor.startsWith('VIIRS');
     $('sensor').className = 'sensor' + (s.year >= 2014 && s.year <= 2016 ? ' warn' : '');
-    $('sensor').innerHTML = `Sensor: <b>${s.sensor}</b>` + (s.year >= 2014 && s.year <= 2016
-      ? '<br>Converted VIIRS data reads lower in these first years; the dip is not less light.' : '');
+    $('sensor').innerHTML = `Sensor: <b>${s.sensor}</b>`;
     slider.value = Math.round(pos);
     if (Math.abs((trend.__p ?? -1) - pos) > 0.05) {                              // move the marker, skip tiny steps
       trend.__p = pos;
